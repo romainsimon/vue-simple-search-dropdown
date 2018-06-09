@@ -1,0 +1,63 @@
+<html>
+  <head>
+    <title>Vue.js search dropdown component - example</title>
+    <script type="text/javascript" src="../node_modules/vue/dist/vue.js"></script>
+    <script type="text/javascript" src="../dist/vue-simple-search-dropdown.min.js"></script>
+    <style type="text/css">
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        line-height: 3em;
+      }
+      h1 {
+        font-weight: 100;
+        font-size: 1.5em;
+      }
+      p {
+        font-size: .8em;
+        color: #ccc;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <h1>Vue.js search dropdown component - example</h1>
+      <Dropdown
+        :options="options"
+        v-on:selected="validateSelection"
+        v-on:filter="getDropdownValues"
+        :disabled="false"
+        placeholder="Please select an animal">
+      </Dropdown>
+      <p>Selected animal: {{ selected.name || 'none' }}</p>
+    </div>
+    <script type="text/javascript">
+      Vue.use(Dropdown);
+      new Vue({
+        el: '#app',
+        data () {
+          return {
+            options: [
+              { name: 'Cat', id: 'cat' },
+              { name: 'Dog', id: 'dog' },
+              { name: 'Elephant', id: 'elephant' },
+              { name: 'Girafe', id: 'girafe' },
+              { name: 'Snake', id: 'snake' },
+              { name: 'Spider', id: 'spider' },
+              { name: 'Unicorn', id: 'unicorn' }              
+            ],
+            selected: { name: null, id: null }
+          }
+        },
+        methods: {
+          validateSelection(selection) {
+            this.selected = selection;
+            console.log(selection.name+' has been selected');
+          },
+          getDropdownValues(keyword) {
+            console.log('You could refresh options by querying the API with '+keyword);
+          }
+        }
+      });
+    </script>
+  </body>
+</html>
