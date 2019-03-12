@@ -3,6 +3,7 @@
 
     <!-- Dropdown Input -->
     <input class="dropdown-input"
+      :name="name"
       @click="showOptions()"
       @blur="exit()"
       @keyup="keyMonitor"
@@ -28,6 +29,12 @@
     name: 'Dropdown',
     template: 'Dropdown',
     props: {
+      name: {
+        type: String,
+        required: false,
+        default: 'dropdown',
+        note: 'Input name'
+      },
       options: {
         type: Array,
         required: true,
