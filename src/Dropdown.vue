@@ -17,7 +17,8 @@
       <div
         class="dropdown-item"
         @mousedown="selectOption(option)"
-        v-for="option of filteredOptions">
+        v-for="(option, index) in filteredOptions"
+        :key="index">
           {{ option.name || option.id || '-' }}
       </div>
     </div>
@@ -52,6 +53,12 @@
         required: false,
         default: false,
         note: 'Disable the dropdown'
+      },
+      maxItem: {
+        type: Number,
+        required: false,
+        default: 10,
+        note: 'Max items showing'
       }
     },
     data() {
@@ -70,7 +77,7 @@
         const regOption = new RegExp(this.searchFilter, 'ig');
         for (const option of this.options) {
           if (this.searchFilter.length < 1 || option.name.match(regOption)){
-            if (filtered.length < 6) filtered.push(option);
+            if (filtered.length < this.maxItem) filtered.push(option);
           }
         }
         return filtered;
@@ -144,8 +151,10 @@
       background-color: #fff;
       min-width: 248px;
       max-width: 248px;
+      max-height: 248px;
       border: 1px solid #e7ecf5;
       box-shadow: 0px -8px 34px 0px rgba(0,0,0,0.05);
+      overflow: auto;
       z-index: 1;
       .dropdown-item {
         color: black;
