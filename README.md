@@ -39,6 +39,7 @@ Once installed, it can be used in a template as simply as:
     v-on:filter="getDropdownValues"
     :disabled="false"
     name="zipcode"
+    :maxItem="10"
     placeholder="Please select an option">
 </Dropdown>
 ```
@@ -49,6 +50,7 @@ Once installed, it can be used in a template as simply as:
 - `placeholder` (optional): A placeholder 
 - `disabled` (optional): true/false
 - `name` (optional): An input name | default: `dropdown`
+- `maxItem` (optional): Max item to show | default: `10`
 
 ### Events
 
