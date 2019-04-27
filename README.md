@@ -4,6 +4,10 @@ A Vue component for a simple searchable dropdown.
 
 No external library is used in this dropdown.
 
+### Demo
+
+Demo here: [https://romainsimon.github.io/vue-simple-search-dropdown/](https://romainsimon.github.io/vue-simple-search-dropdown/)
+
 ## Installation
 
 ```js
