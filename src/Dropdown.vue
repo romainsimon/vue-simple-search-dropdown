@@ -3,7 +3,7 @@
 
     <!-- Dropdown Input -->
     <input class="dropdown-input"
-      @click="showOptions()"
+      @focus="showOptions()"
       @blur="exit()"
       @keyup="keyMonitor"
       v-model="searchFilter"
