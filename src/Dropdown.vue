@@ -57,7 +57,7 @@
       maxItem: {
         type: Number,
         required: false,
-        default: 10,
+        default: 6,
         note: 'Max items showing'
       }
     },
