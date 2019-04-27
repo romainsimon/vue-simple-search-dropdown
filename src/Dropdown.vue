@@ -4,7 +4,7 @@
     <!-- Dropdown Input -->
     <input class="dropdown-input"
       :name="name"
-      @click="showOptions()"
+      @focus="showOptions()"
       @blur="exit()"
       @keyup="keyMonitor"
       v-model="searchFilter"
