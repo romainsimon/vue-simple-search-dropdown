@@ -1,6 +1,6 @@
 {
   "name": "vue-simple-search-dropdown",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A Vue.js simple dropdown component with search",
   "main": "dist/vue-simple-search-dropdown.js",
   "scripts": {
