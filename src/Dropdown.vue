@@ -96,6 +96,10 @@
         this.searchFilter = this.selected.name;
         this.$emit('selected', this.selected);
       },
+      deselect() {
+        this.selected = {};
+        this.searchFilter = '';
+      },
       showOptions(){
         if (!this.disabled) {
           this.searchFilter = '';
@@ -104,8 +108,7 @@
       },
       exit() {
         if (!this.selected.id) {
-          this.selected = {};
-          this.searchFilter = '';
+          this.deselect();
         } else {
           this.searchFilter = this.selected.name;
         }
@@ -121,14 +124,18 @@
     watch: {
       searchFilter() {
         if (this.filteredOptions.length === 0) {
-          this.selected = {};
+          this.deselect();
         } else {
           this.selected = this.filteredOptions[0];
         }
         this.$emit('filter', this.searchFilter);
       },
       default(val) {
-        this.selectOption(val);
+        if(val && val.id) {
+          this.selectOption(val);
+        } else {
+          this.deselect();
+        }
       },
     }
   };
