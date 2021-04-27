@@ -59,7 +59,13 @@
         required: false,
         default: 6,
         note: 'Max items showing'
-      }
+      },
+      'default': {
+        type: Object,
+        required: false,
+        default: null,
+        note: 'The item to select upon initialisation'
+      },
     },
     data() {
       return {
@@ -120,7 +126,10 @@
           this.selected = this.filteredOptions[0];
         }
         this.$emit('filter', this.searchFilter);
-      }
+      },
+      default(val) {
+        this.selectOption(val);
+      },
     }
   };
 </script>
