@@ -44,6 +44,7 @@ Once installed, it can be used in a template as simply as:
     :disabled="false"
     name="zipcode"
     :maxItem="10"
+    :default="{ id: 1, name: 'Option 1' }"
     placeholder="Please select an option">
 </Dropdown>
 ```
@@ -55,6 +56,7 @@ Once installed, it can be used in a template as simply as:
 - `disabled` (optional): true/false
 - `name` (optional): An input name | default: `dropdown`
 - `maxItem` (optional): Max item to show | default: `6`
+- `default` (optional): The item to select upon initialisation
 
 ### Events
 
