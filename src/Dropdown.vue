@@ -60,7 +60,7 @@
         default: 6,
         note: 'Max items showing'
       },
-      'default': {
+      default: {
         type: Object,
         required: false,
         default: null,
