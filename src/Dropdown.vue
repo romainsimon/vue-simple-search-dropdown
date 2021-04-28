@@ -80,7 +80,8 @@
     computed: {
       filteredOptions() {
         const filtered = [];
-        const regOption = new RegExp(this.searchFilter, 'ig');
+        const searchFilter = this.searchFilter.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+        const regOption = new RegExp(searchFilter, 'ig');
         for (const option of this.options) {
           if (this.searchFilter.length < 1 || option.name.match(regOption)){
             if (filtered.length < this.maxItem) filtered.push(option);
