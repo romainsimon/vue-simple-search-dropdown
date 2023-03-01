@@ -1,6 +1,6 @@
 {
   "name": "vue-simple-search-dropdown",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A Vue.js simple dropdown component with search",
   "main": "dist/vue-simple-search-dropdown.js",
   "scripts": {
@@ -26,7 +26,6 @@
     "babel-preset-stage-2": "^6.24.1",
     "babel-runtime": "^6.26.0",
     "css-loader": "^0.28.11",
-    "extract-text-webpack-plugin": "^3.0.2",
     "node-sass": "^4.9.0",
     "rimraf": "^2.6.2",
     "sass-loader": "^7.0.3",

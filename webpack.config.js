@@ -1,5 +1,4 @@
 const webpack = require('webpack');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin')
 const VueLoader = require('vue-loader');
 const merge = require('webpack-merge');
@@ -21,15 +20,8 @@ const config = {
         test: /\.vue$/,
         loader: 'vue-loader',
         options: {
-          rules: {
-            scss: ExtractTextPlugin.extract({
-              use: 'css-loader!sass-loader',
-              fallback: 'vue-style-loader'
-            }),
-            sass: ExtractTextPlugin.extract({
-              use: 'sass-loader',
-              fallback: 'vue-style-loader'
-            })
+          loaders: {
+            'scss': 'vue-style-loader!css-loader!sass-loader'
           }
         },
       },
