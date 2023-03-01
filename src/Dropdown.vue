@@ -9,7 +9,8 @@
       @keyup="keyMonitor"
       v-model="searchFilter"
       :disabled="disabled"
-      :placeholder="placeholder" />
+      :placeholder="placeholder"
+      autocomplete="off" />
 
     <!-- Dropdown Menu -->
     <div class="dropdown-content"
