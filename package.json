@@ -25,18 +25,18 @@
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-stage-2": "^6.24.1",
     "babel-runtime": "^6.26.0",
-    "css-loader": "^0.28.11",
+    "css-loader": "^4.3.0",
     "node-sass": "^4.9.0",
     "rimraf": "^2.6.2",
-    "sass-loader": "^7.0.3",
-    "uglifyjs-webpack-plugin": "^1.2.5",
+    "sass-loader": "^10.0.3",
+    "uglifyjs-webpack-plugin": "^2.2.0",
     "vue": "^2.5.16",
     "vue-html-loader": "^1.2.4",
     "vue-loader": "^15.2.4",
     "vue-style-loader": "^4.1.0",
     "vue-template-compiler": "^2.5.16",
     "webpack": "^4.11.1",
-    "webpack-cli": "^3.0.3",
+    "webpack-cli": "^4.10.0",
     "webpack-merge": "^4.1.2"
   }
 }
